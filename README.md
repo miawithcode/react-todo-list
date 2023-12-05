@@ -2,7 +2,6 @@
 
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -27,7 +26,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](#)
+[![Product Name Screen Shot][product-screenshot]](https://mia-react-todo-list.vercel.app/)
 
 我学习 React 的第一个练手项目。从这里学习如何使用 React，应用 React 的组件思想，以及对 `useState` 和 `useEffect`的练习。
 
@@ -42,8 +41,12 @@
 
 - [x] 开发 Todo List 基本功能
 - [x] 将文件分离成 Component（组件），理解 `props`
-- [ ] 将数据保存在 Local Storage
+- [x] 将数据保存在 Local Storage
 - [ ] 开发编辑待办事项
+
+## Reference
+- [Learn React With This One Project](https://www.youtube.com/watch?v=Rh3tobg7hEo&ab_channel=WebDevSimplified)
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

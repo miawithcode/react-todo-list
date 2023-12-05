@@ -1,11 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TodoForm } from "./components/TodoForm.jsx";
 import { TodoList } from "./components/TodoList.jsx";
 import "./styles/style.css";
 
 export default function App() {
   
-  const [todos, setTodos] = useState([]); // 默认 todos 是一个空数组
+  const [todos, setTodos] = useState(() => {
+    const localValue = localStorage.getItem("ITEMS");
+    if( localValue == null ) return []; // 如果 localStorage 里什么都没有，则返回空数组
+    return JSON.parse(localValue);
+  }); 
+
+  /**
+   * useEffect 不返回任何值，接受函数作为参数
+   * useEffect：每一次数组里的第二个 property 的 object 改变时， 运行接受的这个函数
+   * 在这里我们希望每一次 todos 数组改变的时候，运行 useEffect 里的代码
+   */
+  useEffect(() => {
+    localStorage.setItem("ITEMS", JSON.stringify(todos)); // 把 todos 存到 Local Storage
+  }, [todos]) 
 
   /**
    * 如果想要 modify the exisiting data
