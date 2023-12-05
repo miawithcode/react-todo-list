@@ -1,0 +1,50 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s;
+  gap: 0.5rem;
+}
+
+li:hover {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+li label{
+  flex: 1;
+  transition: background-color .3s;
+  padding: 0.5rem 0;
+}
+
+li label:hover {
+  background-color: var(--clr-secondary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+} */
+
+.btn-danger {
+  color: var(--clr-red);
+  background-color: transparent;
+  border: 1px solid var(--clr-red);
+  padding: 0.3rem;
+}
+
+.btn-danger:hover {
+  background-color: var(--clr-red);
+  color: #fff;
+}
+
+.no-todo-status {
+  font-size: 0.8rem;
+  color: var(--clr-grey)
+}
